@@ -8,4 +8,5 @@ __pycache__/
 .ipynb_checkpoints
 
 *.csv
+*.json
 # data/training.csv
