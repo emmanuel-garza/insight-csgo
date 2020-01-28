@@ -9,4 +9,5 @@ __pycache__/
 
 *.csv
 *.json
+*.pickle
 # data/training.csv

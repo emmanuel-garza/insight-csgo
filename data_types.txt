@@ -1,0 +1,15 @@
+dict_map[map_id][team_id]:
+'score'
+'players_id'
+'win'
+
+
+map_to_event[map_id] = event_id
+
+dict_event[event_id][team_id] = rank
+
+df => Info of each map
+
+dict_player[player_id] = 'df for each map of the player'
+
+
