@@ -10,4 +10,5 @@ __pycache__/
 *.csv
 *.json
 *.pickle
+*.sav
 # data/training.csv
