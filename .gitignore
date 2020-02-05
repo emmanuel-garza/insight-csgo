@@ -11,6 +11,7 @@ __pycache__/
 *.json
 *.pickle
 *.sav
+*.jpg
 *.png
 *.svg
 # data/training.csv
