@@ -14,4 +14,6 @@ __pycache__/
 *.jpg
 *.png
 *.svg
+
+old_models/
 # data/training.csv
