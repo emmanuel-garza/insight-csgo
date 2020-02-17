@@ -1,7 +1,7 @@
 #
 # Module 'csgo.py':
 # - Author: Emmanuel Garza
-# - Last modified: Feb 11,2020
+# - Last modified: Feb 17,2020
 #
 # Description:
 # -> This module contains useful functions for the modeling of professional matches of Counter Strike: Global Offensive
@@ -58,8 +58,6 @@ def append_val(team_01,stat_vec,stat_name,dict_inout):
 
 def create_pre_train_set( dict_player, df_map, dict_map, DAYS_WEIGHT, MAX_RANK, START_DATE, N_MAPS ):
 # 'create_training_set': Creates the training set for the model
-
-    
 
     time_1 = datetime.now()
 
@@ -262,15 +260,13 @@ def create_pre_train_set( dict_player, df_map, dict_map, DAYS_WEIGHT, MAX_RANK, 
             map_training_dict[map_id] = append_val(t,map_rating_vec,'map_rating',map_training_dict[map_id])
         
     print('Converting data to DataFrame')
-    df_ct_start = pd.DataFrame.from_dict( map_training_dict,orient='index')
+    df_all_feat = pd.DataFrame.from_dict( map_training_dict,orient='index')
+
+    # Clean up all the NaN
+    df_all_feat = df_all_feat.fillna(0)
+
     time_2 = datetime.now()
 
     print( 'Total time to create training set = '+str(time_2-time_1) )
 
-    return df_ct_start
-
-
-
-
-
-def create
+    return df_all_feat
