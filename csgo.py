@@ -17,9 +17,6 @@ def load_data():
 # 'load_data': Loads the pre-saved dictionaries and pandas data frames containing
 #              match and player data
 
-    # Required modules
-    
-
     # -> Player dictionary with the dataFrames
     f = open('data/dict_player.pickle', 'rb')
     dict_player = pickle.load(f)
@@ -181,7 +178,6 @@ def create_pre_train_set( dict_player, df_map, dict_map, DAYS_WEIGHT, MAX_RANK, 
                     prize_rtg_vec.append( np.log( prize )/12.0 )
                 else:
                     prize_rtg_vec.append( 0.0 )
-
 
                 df_aux   = df_aux[ (date_vec>1) & (date_vec<DAYS_WEIGHT) ]
 
